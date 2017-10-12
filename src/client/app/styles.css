@@ -1,0 +1,93 @@
+.controller {
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    background-color: #C0C0C0;
+  }
+  .invalid {
+    border: 2px solid red;
+  }
+  .valid {
+    border: 2px solid lawngreen;
+  }
+  .desc-text {
+    margin-right: 5px;
+  }
+  .user-list {
+    margin-left: 0px;
+    padding-left: 0;
+    list-style-type: none;
+    width: 100%;
+    display: table;
+  }
+  .user-list-item-base {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+    padding-left: 10px;
+  }
+  .user-list-item-header {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+    padding-left: 10px;
+    background-color: #D5D5D5;
+  }
+  .user-list-item {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 30px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+    padding-left: 10px;
+    background-color: #000000;
+    color: green;
+  }
+  .user-list-item:hover {
+    color: #FFFFFF;
+    background: #93cede;
+    background: -moz-linear-gradient(left, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #93cede), color-stop(41%, #75bdd1), color-stop(100%, #49a5bf));
+    background: -webkit-linear-gradient(left, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    background: -o-linear-gradient(left, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    background: -ms-linear-gradient(left, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    background: linear-gradient(to right, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1);
+  }
+  .user-list-column {
+    width: 22%;
+    padding: 5px;
+    display: inline-flex;
+    text-align: center;
+  }
+  .user-list-column-header {
+    width: 22%;
+    padding: 5px;
+    display: inline-flex;
+    text-align: center;
+  }
+  .user-female {
+    color: pink;
+  }
+  .user-male {
+    color: lightblue;
+  }
+  body {
+    background-color: #E8E8E8;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+  }
+  
