@@ -25,16 +25,25 @@ class UserController extends React.Component {
     }
 
     numberChanged(e) {
-        this.setState({ numberOfUsers: e.target.value });
+        var newValue = e.target.value;
+        this.setState(
+            { 
+                numberOfUsers: newValue,
+                valid: !isNaN(Number.parseInt(newValue))
+            });
     }
 
     render() {
         return (
-            <div>
-                <span>Number of users to create of update</span>
-                <input type="text" value={this.state.numberOfUsers} onChange={this.numberChanged.bind(this)}/>
-                <button onClick={this.createClicked.bind(this)}>Create</button>
-                <button onClick={this.updateClicked.bind(this)}>Update</button>
+            <div class="controller">
+                <span class="desc-text">Number of users to create of update</span>
+                <input 
+                    type="text" 
+                    value={this.state.numberOfUsers} 
+                    onChange={this.numberChanged.bind(this)}
+                    className={this.state.valid ? 'valid' : 'invalid'}/>
+                <button onClick={this.createClicked.bind(this)} disabled={!this.state.valid}>Create</button>
+                <button onClick={this.updateClicked.bind(this)} disabled={!this.state.valid}>Update</button>
                 <button onClick={this.clearClicked.bind(this)}>Clear</button>
             </div>
         );

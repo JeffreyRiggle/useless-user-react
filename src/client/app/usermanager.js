@@ -56,7 +56,8 @@ class UserManager extends EventEmitter{
     clearUsers() {
         this._makeRequest('DELETE', '/uug/v1/clear').then(data => {
             this.users = [];
-        })
+            this.emit('userschanged');
+        });
     }
 
     _makeRequest(method, url, data) {

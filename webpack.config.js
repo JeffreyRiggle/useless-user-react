@@ -10,6 +10,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     filename: 'index.html',
     inject: 'body'
 });
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
   entry: APP_DIR + '/index.jsx',
@@ -26,11 +27,21 @@ var config = {
         },
         {
             test: /\.css$/,
-            loader: 'css-loader'
+            loader: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader']
+            })
         }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [
+      HtmlWebpackPluginConfig,
+      new ExtractTextPlugin({
+        filename: 'styles.css',
+        disable: false,
+        allChunks: true
+      })
+  ],
   devServer: {
       port: 3000,
       proxy: {

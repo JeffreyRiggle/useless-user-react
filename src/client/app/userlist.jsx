@@ -13,19 +13,19 @@ class UserList extends React.Component {
 
     render() {
         return (
-            <ul>
-                <li>
-                    <span>First Name</span>
-                    <span>Last Name</span>
-                    <span>Occupation</span>
-                    <span>Gender</span>
+            <ul class="user-list">
+                <li class="user-list-item-header">
+                    <span class="user-list-column-header">First Name</span>
+                    <span class="user-list-column-header">Last Name</span>
+                    <span class="user-list-column-header">Occupation</span>
+                    <span class="user-list-column-header">Gender</span>
                 </li>
                 {this.usermanager.users.map(user => 
-                    <li>
-                        <span>{user.firstName}</span>
-                        <span>{user.lastName}</span>
-                        <span>{user.occupation}</span>
-                        <span>{user.gender}</span>
+                    <li class="user-list-item">
+                        <span class="user-list-column">{user.firstName}</span>
+                        <span class="user-list-column">{user.lastName}</span>
+                        <span class="user-list-column">{user.occupation}</span>
+                        <span className={"user-list-column " + (user.gender === 'f' ? 'user-female' : 'user-male')}>{user.gender}</span>
                     </li>)}
             </ul>
         );
